@@ -1,0 +1,54 @@
+<mvc:View
+    controllerName="ui5app.controller.Insurance"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc">
+	<Page
+		title="{i18n>goBackToHome}"
+        showNavButton="true"
+		navButtonPress=".onNavBack">
+        <Panel headerText="{i18n>ShowAllInsurance}"
+                class="sapUiResponsiveMargin"
+                width="auto">
+            <content>
+                <Table id="insuranceTable" items="{insurance>/Insurances}">
+                    <headerToolbar>
+                        <Toolbar>
+                            <Title text="{i18n>allInsurances}"/>
+                            <ToolbarSpacer/>
+                            <SearchField width="50%" 
+                                        search=".onFilterInsurances"/>
+                        </Toolbar>
+                    </headerToolbar>
+                    <columns>
+                        <Column>
+                            <Text text="{i18n>insuranceNumber}"></Text>
+                        </Column>
+                        <Column>
+                            <Text text="{i18n>insuranceHolder}"></Text>
+                        </Column>
+                        <Column>
+                            <Text text="{i18n>insuranceType}"></Text>
+                        </Column>
+                        <Column>
+                            <Text text="{i18n>dateOfCreation}"></Text>
+                        </Column>
+                        <Column>
+                            <Text text="{i18n>dateOfValid}"></Text>
+                        </Column>
+                    </columns>
+                    <items>
+                        <ColumnListItem>
+                            <cells>
+                                <Text text="{insurance>insuranceNumber}"/>
+                                <Text text="{insurance>insuranceHolder}"/>
+                                <Text text="{insurance>insuranceType}"/>
+                                <Text text="{insurance>dateOfCreation}"/>
+                                <Text text="{insurance>dateOfValid}"/>
+                            </cells>
+                        </ColumnListItem>
+                    </items>
+                </Table>
+            </content>
+        </Panel>
+	</Page>
+</mvc:View>

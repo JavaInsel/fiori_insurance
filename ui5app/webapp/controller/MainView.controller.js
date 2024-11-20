@@ -9,7 +9,6 @@ sap.ui.define([
 
         return Controller.extend("ui5app.controller.MainView", {
             onInit: function () {
-
             }
         });
     });

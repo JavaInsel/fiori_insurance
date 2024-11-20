@@ -50,6 +50,10 @@
                 "settings": {
                     "bundleName": "ui5app.i18n.i18n"
                 }
+            },
+            "insurance":{
+                "type": "sap.ui.model.json.JSONModel",
+                "uri": "Insurances.json"
             }
         },
         "resources": {
@@ -71,20 +75,37 @@
             },
             "routes": [
                 {
-                    "name": "RouteMainView",
-                    "pattern": ":?query:",
+                    "name": "main",
+                    "pattern": "",
                     "target": [
-                        "TargetMainView"
+                        "targetMain"
+                    ]
+                },
+                {
+                    "name": "newInsurance",
+                    "pattern": "create_insurance",
+                    "target": [
+                        "targetNewInsurance"
+                    ]
+                },
+                {
+                    "name": "insuranceList",
+                    "pattern": "insurances",
+                    "target": [
+                        "targetInsuranceList"
                     ]
                 }
             ],
             "targets": {
-                "TargetMainView": {
-                    "viewType": "XML",
-                    "transition": "slide",
-                    "clearControlAggregation": false,
-                    "viewId": "MainView",
+                "targetMain": {  
                     "viewName": "MainView"
+                },
+                "targetNewInsurance": {  
+                    "viewName": "NewInsurance"
+                  
+                },
+                "targetInsuranceList": {  
+                    "viewName": "Insurance"
                 }
             }
         },
@@ -92,7 +113,7 @@
             "viewName": "ui5app.view.App",
             "type": "XML",
             "async": true,
-            "id": "App"
+            "id": "app"
         }
     }
 }
