@@ -1,0 +1,13 @@
+{
+  "generator-ui5-project": {
+    "namespaceUI5": "de.vkb",
+    "projectName": "hansenui5",
+    "uimoduleName": "ui5app",
+    "enableFPM": false,
+    "platform": "Application Router",
+    "ui5Libs": "Content delivery network (SAPUI5)",
+    "newDir": false,
+    "initRepo": true,
+    "projectId": "de.vkb.hansenui5"
+  }
+}

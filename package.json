@@ -1,0 +1,17 @@
+{
+    "name": "de.vkb.hansenui5",
+    "scripts": {
+        "build": "mbt build --mtar de.vkb.hansenui5.mtar",
+        "build:workspaces": "npm run build --workspaces --if-present",
+        "deploy": "cf deploy mta_archives/de.vkb.hansenui5.mtar --retries 0",
+        "lint": "npm run lint --workspaces --if-present",
+        "ui5lint": "npm run ui5lint --workspaces --if-present",
+        "start:ui5app": "npm start --workspace ui5app"
+    },
+    "dependencies": {
+        "mbt": "^1"
+    },
+    "workspaces": [
+        "ui5app"
+    ]
+}
