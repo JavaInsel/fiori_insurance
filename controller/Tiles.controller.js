@@ -1,0 +1,2 @@
+sap.ui.define(["sap/ui/core/mvc/Controller","sap/m/MessageToast"],(e,n)=>{"use strict";let s;return e.extend("ui5app.controller.Tiles",{onInit(){s=this.getOwnerComponent().getRouter()},onPressCreate(){s.navTo("newInsurance");n.show("Create New")},onPressShow(){s.navTo("insuranceList");n.show("Show")}})});
+//# sourceMappingURL=Tiles.controller.js.map
