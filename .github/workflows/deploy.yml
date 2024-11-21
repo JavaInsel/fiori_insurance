@@ -17,9 +17,15 @@ jobs:
     - run: npm install
     - run: npm run build
 
+    - name: Upload production-ready build files
+      uses: actions/upload-artifact@v3
+      with:
+        name: production-files
+        path: ./dist
+
     - name: GitHub Pages action
       uses: peaceiris/actions-gh-pages@v4
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: .fiori_insurance_mta_build_tmp/de.vkb.hansenui5-approuter
+        publish_dir: ./dist
         publish_branch: gh-pages
