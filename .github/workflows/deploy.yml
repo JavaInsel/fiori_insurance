@@ -21,13 +21,13 @@ jobs:
         run: npm install
 
       - name: Build project
-        run: npm run build
+        run: ui5 build --config=ui5.yaml --clean-dest --dest ./dist
 
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v3
         with:
           name: production-files
-          path: ./approuter/dist/ui5app
+          path: ./dist
 
   deploy:
     name: Deploy
@@ -40,7 +40,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: production-files
-          path: ./approuter/dist/ui5app
+          path: ./dist
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
