@@ -1,0 +1,2 @@
+sap.ui.define(["sap/ui/core/mvc/Controller","sap/ui/core/routing/History"],function(n,e){"use strict";return n.extend("ui5app.controller.NewInsurance",{onInit:function(){},onNavBack(){const n=e.getInstance();const t=n.getPreviousHash();if(t!==undefined){window.history.go(-1)}else{const n=this.getOwnerComponent().getRouter();n.navTo("main",{},true)}}})});
+//# sourceMappingURL=NewInsurance.controller.js.map

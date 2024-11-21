@@ -1,0 +1,11 @@
+<mvc:View
+	controllerName="ui5app.controller.NewInsurance"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc">
+	<Page
+		title="{i18n>goBackToHome}"
+        showNavButton="true"
+		navButtonPress=".onNavBack">
+		<ObjectHeader title="Invoice"/>
+	</Page>
+</mvc:View>
