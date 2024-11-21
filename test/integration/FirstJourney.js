@@ -1,2 +1,0 @@
-sap.ui.define(["sap/ui/test/Opa5","sap/ui/test/opaQunit","./pages/MainView"],function(e,i){"use strict";e.extendConfig({viewNamespace:"ui5app.view",autoWait:true});QUnit.module("MainView");i("Should have correct title",function(e,i,t){e.iStartMyUIComponent({componentConfig:{name:"ui5app",async:true},hash:""});t.onTheMainViewPage.theTitleShouldBeCorrect();t.iTeardownMyApp()})});
-//# sourceMappingURL=FirstJourney.js.map
